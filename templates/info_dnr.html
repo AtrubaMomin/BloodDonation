@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Give Life:Spread Joy</title>
+	<style>
+	
+		html {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: 	#808080;
+}
+
+
+
+.YES {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+.NO{
+	width: 300px;
+}
+
+input:checked {
+  border: 6px solid black;
+}
+
+button,
+legend {
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 0;
+  font-size: 14px;
+  
+}
+
+button:hover,
+button:focus {
+  color: #999;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+
+}
+	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Give life : Spread Joy</title>
+  <div>
+  <h1>YOUR FIRST DONATION:</h1>
+  <p>
+    <form method="POST" action="{%url 'adddnr' %}">
+      {% csrf_token %} 
+    Yes <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"> No <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"><br>
+    <div id="ifYes" style="visibility:hidden">
+      Monetary-total blood donated in c.c<input type='text' id='mone' name='mone'><br>
+    </div>
+    <div id="ifNo" style="visibility:hidden">
+  Recency-months since the last donation<input type='text' id='rec' name='rec'><br>
+  Frequency-total no.of donation<input type='text' id='freq' name='freq'><br>
+  Monetary-total blood donated in c.c<input type='text' id='mone' name='mone'><br>
+  Time-months since the first donation<input type='text' id='fdon' name='fdon'><br>
+
+</div>
+<br>
+<input type="submit" value="Submit">
+</p><form>
+    
+<script>
+  function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+	document.getElementById('ifNo').style.visibility = 'hidden';
+        document.getElementById('ifYes').style.visibility = 'visible';
+    } 
+  else
+
+      if (document.getElementById('noCheck').checked){
+      
+      document.getElementById('ifNo').style.visibility = 'Visible';
+        document.getElementById('ifYes').style.visibility = 'hidden';
+      
+}
+}
+</script>
+</head>
+</html>

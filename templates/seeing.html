@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'assets/m_css/mystyle.css' %}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+        <title>Give Life:Spread Joy</title>
+   
+</head>
+<body>
+    <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop " id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+
+	<!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <img src="{% static 'assets/m_img/logo2.png' %}" class="logo">
+                <a href="#" class="nav__logo">Blood Donation</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Why Become Donor</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link active-link">Process</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Contact Us</a></li>
+                        <li class="nav__item"><a href="{% url 'register' %}" class="nav__link">Login</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+            <section class="share section bd-container" id="share">
+                
+                    <div class="share__data">
+                        <div class="reg__img">
+                        <img src="{% static 'assets/m_img/seeing.jpg' %}" alt="">
+                        </div>
+                        <h2 class="section-title-center">Seeing</h2>
+                        <p class="share__description">Because of the risk of bloodborne infections, not everyone can donate blood. The following are a few high-risk groups that are not eligible to donate blood:
+                            <ol class="seeing">
+                                <li>Anyone who has used injected drugs, steroids or another substance not prescribed by a doctor in the past three months</li>
+                                <li>Men who have had sexual contact with other men in the past three months</li>
+                                <li>Anyone who has had a positive test for HIV</li>
+                                <li>Anyone who has had babesiosis, a rare and severe tick-borne disease, or the parasitic infection Chagas' disease</li>
+                                <li>Anyone who has risk factors for the degenerative brain disorder Creutzfeldt-Jakob disease (CJD)</li>
+                                <li></li>
+                            </ol>
+                            <p class="seeing">
+You will also have a brief physical exam, which includes checking your blood pressure, pulse and temperature. A small sample of blood is taken from a finger prick and is used to check the oxygen-carrying component of your blood (hemoglobin level). If your hemoglobin concentration is normal and you've met all the other screening requirements, you can donate blood.
+</p>
+                        
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        
+        <footer class="footer section">
+            <div class="footer__container bd-container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        <a href="#" class="footer__logo">Blood Donation</a>
+                    </h3>
+                    <p class="footer__description">Be Kind To Help The <br>Needy</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Home </a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Why Become Donor</a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Process</a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2021 Blood Donation. All right reserved</p>
+        </footer>
+
+
+	 <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="{% static 'assets/m_js/mymain.js' %}"></script>
+
+</body>
+</html>

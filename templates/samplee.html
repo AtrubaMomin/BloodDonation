@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'assets/m_css/mystyle.css' %}">
+
+        <title>Blood Donation</title>
+   
+</head>
+<title>Give Life:Spread Joy</title>
+<body>
+    <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop " id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+
+	<!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <img src="{% static 'assets/m_img/logo2.png' %}" class="logo">
+                <a href="#" class="nav__logo">Blood Donation</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link active-link">Why Become Donor</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Process</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Contact Us</a></li>
+                        <li class="nav__item"><a href="{% url 'register' %}" class="nav__link">Login</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+            <section class="share section bd-container" id="share">
+                <div class="share__container bd-grid">
+                    <div class="share__data">
+                        <h2 class="section-title-center">Find The HERO In YOU</h2>
+                        <p class="share__description">There are many ways you can make a difference and save lives. Our team members will help identify which type of donation is best for you, based on your blood type and the immediate need for blood or blood products.</p><br><h3 class="decoration__title">Why it's done</h3><br><p>
+You agree to have blood drawn so that it can be given to someone who needs a blood transfusion.
+
+Millions of people need blood transfusions each year. Some may need blood during surgery. Others depend on it after an accident or because they have a disease that requires blood components. Blood donation makes all of this possible. There is no substitute for human blood — all transfusions use blood from a donor.
+
+Request an Appointment at Mayo Clinic
+Risks
+</p>
+                        
+                    </div>
+
+                    <div class="share__img">
+                        <img src="{% static 'assets/m_img/img2.png' %}" alt="">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        
+        <footer class="footer section">
+            <div class="footer__container bd-container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        <a href="#" class="footer__logo">Blood Donation</a>
+                    </h3>
+                    <p class="footer__description">Be Kind To Help The <br>Needy</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Home </a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Why Become Donor</a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Process</a></li>
+                        <li><a href="http://127.0.0.1:8000/" class="footer__link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2021 Blood Donation. All right reserved</p>
+        </footer>
+
+
+	 <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="{% static 'assets/m_js/mymain.js' %}"></script>
+
+</body>
+</html>

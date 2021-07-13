@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Give Life: Spread Joy
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="{% static 'adminassets/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{% static 'adminassets/css/paper-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{% static 'adminassets/demo/demo.css' %}" rel="stylesheet" />
+
+  <style>
+    form{
+      padding-left: 15em;
+      padding-right: 9em;
+    }
+    .form-input {
+    width: 75%;
+    border: 1px solid #ebebeb;
+    border-radius: 30px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    padding: 17px 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content a {
+  color: #2c2c2c;
+    font-size: 18px;
+    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+  .card {
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  max-height: 400px;
+    max-width: 400px;
+    margin: auto;
+    padding:1em;
+    text-align: center;
+    font-family: arial;
+    font-size: inherit;
+}
+
+.login100-form-btn {
+    font-family: Ubuntu-Bold;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    border-radius: 21px;
+    background: #d41872;
+    background-image: -moz-linear-gradient(to left, #cc0000, #ffffff);
+    background-image: -ms-linear-gradient(to left, #cc0000, #ffffff);
+    background-image: -o-linear-gradient(to left, #cc0000, #ffffff);
+    background-image: -webkit-linear-gradient(to left, #cc0000, #ffffff);
+    background-image: linear-gradient(to left, #00b8ff, #17a2b87d);
+}
+    body{
+      background-color: #f4f3ef;
+    }
+  </style>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="white" data-active-color="danger">
+      <div class="logo">
+        <a href="#" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="{% static 'adminassets/img/logo-small.png' %}">
+          </div>
+          <!-- <p>CT</p> -->
+        </a>
+        <a href="#" class="simple-text logo-normal">
+          IM Admin
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="{% url 'adminhome' %}">
+              <i class="nc-icon nc-bank"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="{%url 'query' %}">
+              <i class="nc-icon nc-bell-55"></i>
+              <p>Messages</p>
+            </a>
+          </li>
+          <li  class="active ">
+            <a href="{%url 'update' %}">
+              <i class="nc-icon nc-badge"></i>
+              <p>Update Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="{%url 'predict' %}">
+              <i class="nc-icon nc-chart-bar-32"></i>
+              <p>Make Predictions</p>
+            </a>
+          </li>
+         
+          <li>
+            <a href="{%url 'actacc' %}">
+              <i class="nc-icon nc-vector"></i>
+              <p>Acceptors List</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+        <div class = "content">
+          <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+           
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+         
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+                    <form method="POST" id="signup-form" class="signup-form"  action="{% url 'updatefrm' %}">
+                        {% csrf_token %} 
+                        <h2 class="form-title">Update Profile...</h2>
+                        <div class="form-group"><br><br>
+                            <input type="text" class="form-input" name="uname" placeholder="Enter Username"/>
+                        </div><br>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="pwd" placeholder="Enter new password"/>
+                        </div><br>
+                        <div class="form-group">
+                            <button class="login100-form-btn">Done</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'signup_js/main.js' %}"></script>
+</body>
+</html>

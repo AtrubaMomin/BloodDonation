@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Give Life: Spread Joy</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'signup_fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'signup_css/style.css' %}">
+    <style>
+        body{
+            background-image: url('{% static "/signup_images/bd.jpg" %}');
+        }
+
+ 
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+<section class="signup">
+    <!-- <img src="images/signup-bg.jpg" alt=""> -->
+    <div class="container">
+        <div class="signup-content">
+            <center>
+                Hey {{name}} we appreciate yr efforts
+
+            </center>
+            <p>Thanks for making donation via us and surely u will help some needy!!!</p>
+            <p class="loginhere">
+               <a href="{% url 'allaccptr' name %}" class="loginhere-link">Click here</a> TO know about needy!!!
+            </p>

@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <!--========== BOX ICONS ==========-->
+            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+            <!--========== CSS ==========-->
+            <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="{% static 'signup_fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+        <link href="{% static 'adminassets/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <!-- Main css -->
+        <link rel="stylesheet" href="{% static 'signup_css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+       <!-- <link rel="stylesheet" href="{% static 'css/aldonarcss.css' %}">-->
+       <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+            <title>Blood Donation</title>
+        </head>
+<style>
+  form{
+    padding-top: 1cm;
+  }
+  table{
+    padding-top: 10cm;
+  }
+</style>
+<title>Give Life:Spread Joy</title>
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <img src="{% static 'home_assets/img/logo2.png' %}" class="logo">
+        <a href="#" class="nav__logo">Blood Donation</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              
+              
+              <!--<li class="nav__item"><a href="#Process" class="nav__link">Profile</a></li>-->
+              <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Logout</a></li>
+
+              
+          </ul>
+      </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+<style>
+
+  .image-background-text {                    
+      
+      background-repeat: no-repeat;                    
+      border: 1px solid #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25px;
+      width: 25px;
+  }
+  .text-overlay {
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+
+      height: 256px;
+      width: 256px;
+      text-align: center;
+      background: transparent;
+      font-size: 70pt;
+      font-weight: bold; 
+      color: firebrick;
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+    <div class="container-fluid">
+      <div class="navbar-wrapper">
+        <div class="navbar-toggle">
+          <button type="button" class="navbar-toggler">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </nav>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <div class="image-background-text mt-4">
+
+        </button>
+        <a href="{%url 'dnrform' %}" class="button">Donate Blood</a>
+        <form  method="POST" action="{%url 'usersearchdonar'  %}">
+            {% csrf_token %} 
+          <div class="input-group no-border">
+            <input type="text" value="" name='srchbldgrp' class="form-control" placeholder="Search Blood Group...">
+            
+          </div>
+        </form>
+     </div>
+    </div></div></div>
+  </nav>
+  <!-- End Navbar -->
+  
+
+  <!-- Google fonts -->
+<link href='https://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+<body>
+  
+            
+            
+<!--   Core JS Files   -->
+<script src="{% static 'adminassets/js/core/jquery.min.js' %}"></script>
+<script src="{% static 'adminassets/js/core/popper.min.js' %}"></script>
+<script src="{% static 'adminassets/js/core/bootstrap.min.js' %}"></script>
+<script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Chart JS -->
+<script src="{% static 'adminassets/js/plugins/chartjs.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="{% static 'adminassets/js/plugins/bootstrap-notify.js' %}"></script>
+<!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="{% static 'adminassets/js/paper-dashboard.min.js' %}" type="text/javascript"></script><!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+<script src="{% static 'adminassets/demo/demo.js' %}"></script>
+<script src="{% static 'assets/m_js/mymain.js' %}"></script>
+
+</body></html>

@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Give Life: Spread Joy</title>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'signup_fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'signup_css/style.css' %}">
+    <style>
+        body{
+            background-image: url('{% static "/signup_images/bd.jpg" %}');
+        }
+
+ 
+    </style>
+    <title>Give Life:Spread Joy</title>
+</head>
+
+<body>
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form"  action="{% url 'signupcheck' %}">
+                        {% csrf_token %} 
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" placeholder="Your Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="bldgrp" id="bldgrp" placeholder="Your Blood Group"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="add" placeholder="Your Address"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="cnumber" id="cnumber" placeholder="Your Contact Number"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="{% url 'loginuser' %}" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'signup_js/main.js' %}"></script>
+    <script src="{% static 'home_assets/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+
+        <title>Give Life:Spread Joy</title>
+    </head>
+    <body>
+
+        <section class="send section">
+            <div class="send__container bd-container bd-grid" id="Contact">
+                <div class="send__content">
+                    <h2 class="section-title-center send__title">Profile</h2>
+            <h3><center><p>Name :{{name}}</p><br>
+            <p>Email : {{mail}}</p><br>
+            <p>Blood Group :{{bloodgrp}}</p><br>
+            <p>Contact :{{contact}}</p><br>
+            <p>Location :{{Location}}</p><br></center>
+            <br>
+            <br>
+            <a href="{%url 'accupdate' name %}"<button class="button">Update</button></a>
+            <a href="{%url 'accptrsrch' name %}"<button class="button">Okay</button></a>
+        
+        
+        
+    </div>
+
+
+    <div class="send__img">
+        <img src="{% static 'home_assets/img/msg.png' %}" alt="">
+    </div>
+</div>
+</section>
+</body>
+</html>
+

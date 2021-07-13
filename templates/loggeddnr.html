@@ -1,0 +1,175 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <!--========== BOX ICONS ==========-->
+            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+            <!--========== CSS ==========-->
+            <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="{% static 'signup_fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+        <!-- Main css -->
+        <link rel="stylesheet" href="{% static 'signup_css/style.css' %}">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+    
+        <title>Give Life:Spread Joy</title>
+            <style>
+                .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+  background-color:grey;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+     height: 90%;
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+            </style>
+        </head>
+
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <img src="{% static 'home_assets/img/logo2.png' %}" class="logo">
+        <a href="#" class="nav__logo">Blood Donation</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'dnrform' name %}" class="nav__link">Donate</a></li>
+                <li class="nav__item"><a href="{% url 'viewaccptr' name %}" class="nav__link">Be Acceptors</a></li>
+               <!-- <button class="button" id='myBtn'>Profile</button>-->
+                <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Logout</a></li>
+
+               
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!--<div class="main">
+        <div id="myModal" class="modal">
+
+           
+            <div class="modal-content">
+             <span class="close">&times;</span>
+             <center>
+          <i class="fa fa-user" style="font-size:100px;color:white"></i>
+            <p>Name :<br><i>{{name}}</i></p><br>
+            <p> -------------------------------------------------------------------------</p>
+              <p>Email :<br><i>{{name}}</i></p><br>
+              <p> -------------------------------------------------------------------------</p>
+              <p>Contact No :<br><i>{{name}}</i></p><br>
+              <p> -------------------------------------------------------------------------</p>
+              <p>Status :<br><i>Currently Logged In</i></p><br>
+             </center>
+            </div>
+          
+          </div>
+          </div></div></div>-->
+<p align='center'> Hi <bold>{{name}}</bold></p>
+<section class="decoration section bd-container" id="Process">
+<div class="decoration__container bd-grid">
+  <div class="col-md-3 col-sm-6 vd">
+  <div class="decoration__data">
+      <img src="{% static 'home_assets/img/blog_04.jpg' %}" alt="" class="decoration__img">
+      <h3 class="decoration__title"><b></b>Donate</h3>
+      <p>You lie or sit in a reclining chair with your arm extended on an armrest.If you have a preference for which arm or vein is used, share it. A blood pressure cuff or tourniquet is placed around your upper arm  </p>
+      <a href="{% url 'dnrform' name %}" class="button"style="margin-top: 5px;" >Donate</a>
+   
+</div>
+</div>
+
+  <div class="col-md-3 col-sm-6 vd">
+  <div class="decoration__data">
+      <img src="{% static 'home_assets/img/img3.png' %}" alt="" class="decoration__img">
+      <h3 class="decoration__title"><b></b>Accept</h3>
+      <p>You not need to fill any form if you are a genuine seeker. Just by clicking on Acceptors you will be added in our seekers list. And you will soon find the perfect blood match for you</p>
+   <a href="{% url 'viewaccptr' name %}" class="button"style="margin-top: 5px;" >Accept</a>
+</div>
+  </div>
+</div>
+</section>
+
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'signup_js/main.js' %}"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+        
+        </script>
+         <script src="{% static 'assets/m_js/mymain.js' %}"></script>
+
+</body>
+
+</html>

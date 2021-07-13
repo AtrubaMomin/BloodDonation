@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <!--========== BOX ICONS ==========-->
+            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
+            <!--========== CSS ==========-->
+            <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+    
+            <title>Blood Donation</title>
+        </head>
+
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <img src="{% static 'home_assets/img/logo2.png' %}" class="logo">
+        <a href="#" class="nav__logo">Blood Donation</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#share" class="nav__link">Why Become Donor</a></li>
+                <li class="nav__item"><a href="#Process" class="nav__link">Process</a></li>
+                <li class="nav__item"><a href="#Contact" class="nav__link">Contact Us</a></li>
+                <li class="nav__item"><a href="{% url 'register' %}" class="nav__link">Login</a></li>
+
+                <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+</header>
+</html>

@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+        <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="{% static 'assets/m_css/mystyle.css' %}">
+
+        <title>Give Life:Spread Joy</title>
+   
+</head>
+<body>
+    <!--========== SCROLL TOP ==========-->
+        <a href="#" class="scrolltop " id="scroll-top">
+            <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
+        </a>
+
+	<!--========== HEADER ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <img src="{% static 'assets/m_img/logo2.png' %}" class="logo">
+                <a href="#" class="nav__logo">Blood Donation</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Why Become Donor</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link active-link">Process</a></li>
+                        <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Contact Us</a></li>
+                        <li class="nav__item"><a href="{% url 'register' %}" class="nav__link">Login</a></li>
+
+                        <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+            <section class="share section bd-container" id="share">
+                <div class="reg__img">
+                        <img src="{% static 'assets/m_img/donate.jpg' %}" alt="">
+                    </div>
+                
+                    <div class="share__data">
+                        <h2 class="section-title-center">Donate</h2>
+                        <h3>Enjoy the feeling of accomplishment knowing you are helping to save lives.</h3>
+                        <p class="share__description">After donating, you sit in an observation area, where you rest and eat a light snack. After 15 minutes, you can leave. After your blood donation:
+                            <ol class="save">
+                                <li>Drink extra fluids.</li>
+                                <li>Avoid strenuous physical activity or heavy lifting for about five hours.</li>
+                                <li>If you feel lightheaded, lie down with your feet up until the feeling passes.
+                                </li>
+                                <li>Keep your bandage on and dry for the next five hours.</li>
+                                <li>If you have bleeding after removing the bandage, put pressure on the site and raise your arm until the bleeding stops.</li>
+                                <li>If bruising occurs, apply a cold pack to the area periodically during the first 24 hours.</li>
+                                <li>Consider adding iron-rich foods to your diet to replace the iron lost with blood donation.
+                                </li>
+                            </ol>
+
+                            </p>
+                        
+                </div>
+            </section>
+        </main>
+
+        <!--========== FOOTER ==========-->
+        
+        <footer class="footer section">
+            <div class="footer__container bd-container bd-grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">
+                        <a href="#" class="footer__logo">Blood Donation</a>
+                    </h3>
+                    <p class="footer__description">Be Kind To Help The <br>Needy</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home </a></li>
+                        <li><a href="#share" class="footer__link">Why Become Donor</a></li>
+                        <li><a href="#Process" class="footer__link">Process</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact Us</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2021 Blood Donation. All right reserved</p>
+        </footer>
+
+
+	 <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="{% static 'assets/m_js/mymain.js' %}"></script>
+
+</body>
+</html>

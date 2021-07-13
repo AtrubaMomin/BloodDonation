@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+            <!--========== BOX ICONS ==========-->
+            <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+            <link rel="apple-touch-icon" sizes="76x76" href="{% static 'adminassets/img/apple-icon.png' %}">
+            <link rel="icon" type="image/png" href="{% static 'adminassets/img/favicon.png' %}">
+            <!--========== CSS ==========-->
+            <link rel="stylesheet" href="{% static 'home_assets/css/styles.css' %}">
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="{% static 'signup_fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="{% static 'signup_css/style.css' %}">
+    
+            <title>Give Life:Spread Joy</title>
+        </head>
+        <style>
+            table{
+                text-align: center;
+                font-size: 14px;
+                border: 14px;
+                border-radius: 10px;
+                border-color: brown;
+            }
+        </style>
+
+<header class="l-header" id="header">
+    <nav class="nav bd-container">
+        <img src="{% static 'home_assets/img/logo2.png' %}" class="logo">
+        <a href="#" class="nav__logo">Blood Donation</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">View donors</a></li>
+               
+              <li class="nav__item"><a href="{%url 'accprofile' name %}" class="nav__link">Profile</a></li>
+                <li class="nav__item"><a href="http://127.0.0.1:8000/" class="nav__link">Logout</a></li>
+
+                
+
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+        </div>
+    </nav>
+    <align='right'></align>
+      
+</header>
+<center>
+<body>
+    
+    <table class="table">
+        <thead class=" text-primary">
+          <th>
+            Name
+          </th>
+          <th>
+            Blood Group
+          </th>
+          <th>
+            City
+          </th>
+          <th class="text-right">
+            Contact Number
+          </th>
+        </thead>
+        <tbody>
+          {% for dnr in dnrs %}
+          <tr>
+            <td>
+              {{dnr.Name}}
+            </td>
+            <td>
+              {{dnr.bloodgroup}}
+            </td>
+            <td>
+              {{dnr.Location}}
+            </td>
+            <td class="text-right">
+              {{dnr.contact}}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+     
+</body>
+
+</html>
