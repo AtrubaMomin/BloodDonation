@@ -1,1 +1,1 @@
-web: gunicorn CCMS.wsgi --log-file -
+web: sh setup.sh && streamlit run manage.py
