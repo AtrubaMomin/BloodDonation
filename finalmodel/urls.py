@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     #path('admin/', admin.site.urls)
     path('',views.home),
@@ -62,7 +65,10 @@ urlpatterns = [
     path('accupdateuser/?name=<name>',views.accupdateuser,name='accupdateuser'),
     path('dnrupdate/?name=<name>',views.dnrupdate,name='dnrupdate'),
     path('dnrupdateuser/?name=<name>',views.dnrupdateuser,name='dnrupdateuser'),
-    path('actacc/',views.actacc,name="actacc")
+    path('actacc/',views.actacc,name="actacc"),
+
+    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     
     
 
