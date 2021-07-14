@@ -127,4 +127,8 @@ STATICFILES_DIRS = [
 ]
 VENV_PATH = os.path.dirname(BASE_DIR)
 #STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+
 
