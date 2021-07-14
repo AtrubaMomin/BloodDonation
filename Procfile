@@ -1,1 +1,1 @@
-web: gunicorn finalmodel(sqlite).wsgi --log-file -
+web: gunicorn finalmodel.wsgi --log-file -
