@@ -25,9 +25,8 @@ SECRET_KEY = '=t(qr@*&#hwp6ldc4ew4s))yzs1)4)p%+a0mqsnh7(d%2bq+xv'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://hemodonat.herokuapp.com']
 
 
 # Application definition
@@ -127,9 +126,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 VENV_PATH = os.path.dirname(BASE_DIR)
-#STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
-
+STATIC_ROOT = os.path.join(VENV_PATH, 'static_root')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
